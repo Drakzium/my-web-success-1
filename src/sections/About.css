@@ -1,0 +1,110 @@
+.about {
+  background:
+    radial-gradient(ellipse 50% 40% at 90% 10%, rgba(57, 255, 20, 0.05), transparent 60%),
+    var(--bg-primary);
+}
+
+.about__grid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: end;
+}
+
+.about__visual {
+  justify-self: center;
+  width: min(100%, 360px);
+}
+
+.about__frame {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(145deg, rgba(18, 18, 18, 0.9), rgba(5, 5, 5, 0.4));
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.about__orbit {
+  position: absolute;
+  width: 68%;
+  height: 68%;
+  border: 1px dashed rgba(57, 255, 20, 0.35);
+  border-radius: 50%;
+  animation: spin-slow 22s linear infinite;
+}
+
+.about__core {
+  width: 28%;
+  height: 28%;
+  background: radial-gradient(circle at 30% 30%, #39ff14, #122010 55%, #050505);
+  box-shadow: 0 0 40px rgba(57, 255, 20, 0.2);
+}
+
+.about__label {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.about__pillars {
+  display: grid;
+  gap: 1px;
+  margin-top: var(--space-8);
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.about__pillar {
+  background: var(--bg-secondary);
+  padding: var(--space-6);
+}
+
+.about__pillar-index {
+  display: block;
+  margin-bottom: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.about__pillar h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-card);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.about__pillar p {
+  color: var(--text-secondary);
+  max-width: 34rem;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about__orbit {
+    animation: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1.25fr 0.9fr;
+  }
+
+  .about__pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

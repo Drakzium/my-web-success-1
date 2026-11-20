@@ -1,0 +1,67 @@
+:root {
+  /* Brand */
+  --bg-primary: #050505;
+  --bg-secondary: #0c0c0c;
+  --bg-elevated: #121212;
+  --bg-panel: rgba(18, 18, 18, 0.72);
+
+  --accent: #39ff14;
+  --accent-muted: #2bc410;
+  --accent-soft: rgba(57, 255, 20, 0.12);
+  --accent-glow: rgba(57, 255, 20, 0.28);
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #6b6b6b;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --border-accent: rgba(57, 255, 20, 0.35);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-hero: clamp(2.625rem, 8vw, 7.5rem);
+  --text-section: clamp(2rem, 5.5vw, 4.5rem);
+  --text-card: clamp(1.25rem, 2vw, 1.875rem);
+  --text-body: clamp(0.9375rem, 1.2vw, 1.1875rem);
+  --text-nav: clamp(0.875rem, 1vw, 1rem);
+  --text-label: clamp(0.75rem, 0.9vw, 0.875rem);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --container: min(1120px, calc(100% - 2.5rem));
+  --nav-height: 4.5rem;
+  --radius: 4px;
+  --radius-md: 12px;
+  --radius-btn: 14px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --z-nav: 100;
+  --z-overlay: 200;
+  --z-cursor: 300;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container: min(100%, calc(100% - 1.5rem));
+    --text-hero: clamp(2.625rem, 11vw, 4rem);
+    --text-section: clamp(2rem, 8vw, 2.625rem);
+    --text-card: clamp(1.25rem, 4vw, 1.5rem);
+    --text-body: clamp(0.9375rem, 3.5vw, 1.0625rem);
+  }
+}

@@ -1,0 +1,22 @@
+.logo-disintegration {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: var(--space-4);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  z-index: 1;
+}
+
+.logo-disintegration .no-one-logo {
+  pointer-events: none;
+}
+
+.logo-disintegration[data-state='static'] .no-one-logo__particle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logo-disintegration {
+    margin-bottom: var(--space-3);
+  }
+}

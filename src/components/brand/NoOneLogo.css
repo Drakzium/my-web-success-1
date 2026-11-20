@@ -1,0 +1,164 @@
+.no-one-logo {
+  --logo-letter: #f5f5f5;
+  --logo-accent: var(--accent);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--logo-letter);
+  isolation: isolate;
+  perspective: 900px;
+  transform-style: preserve-3d;
+}
+
+.no-one-logo__emblem {
+  position: relative;
+  flex-shrink: 0;
+  transform-style: preserve-3d;
+}
+
+.no-one-logo__emblem-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.no-one-logo__emblem-svg [data-logo-frag] {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.no-one-logo__stroke-muted {
+  color: rgba(245, 245, 245, 0.55);
+}
+
+.no-one-logo__wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform-style: preserve-3d;
+}
+
+.no-one-logo__letter {
+  display: inline-block;
+  color: var(--logo-letter);
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.no-one-logo__letter--gap {
+  margin-left: 0.42em;
+}
+
+.no-one-logo__letter--dot {
+  color: var(--logo-accent);
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.45);
+}
+
+.no-one-logo__glow {
+  position: absolute;
+  inset: -30% -18%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 28% 50%,
+    rgba(57, 255, 20, 0.18) 0%,
+    rgba(57, 255, 20, 0.05) 38%,
+    transparent 68%
+  );
+  opacity: 0.85;
+  filter: blur(2px);
+}
+
+.no-one-logo__particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.no-one-logo__particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.7);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+}
+
+/* Nav / compact */
+.no-one-logo--nav .no-one-logo__emblem,
+.no-one-logo--compact .no-one-logo__emblem {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.no-one-logo--nav .no-one-logo__wordmark,
+.no-one-logo--compact .no-one-logo__wordmark {
+  font-size: 0.92rem;
+  letter-spacing: 0.12em;
+}
+
+.no-one-logo--nav .no-one-logo__glow,
+.no-one-logo--compact .no-one-logo__glow {
+  opacity: 0.4;
+}
+
+.no-one-logo--compact .no-one-logo__letter--gap {
+  margin-left: 0.32em;
+}
+
+/* Hero */
+.no-one-logo--hero {
+  gap: 0.95rem;
+}
+
+.no-one-logo--hero .no-one-logo__emblem {
+  width: clamp(2.4rem, 5vw, 3.25rem);
+  height: clamp(2.4rem, 5vw, 3.25rem);
+}
+
+.no-one-logo--hero .no-one-logo__wordmark {
+  font-size: clamp(1.55rem, 3.6vw, 2.35rem);
+  letter-spacing: 0.14em;
+}
+
+.no-one-logo--hero .no-one-logo__letter--dot {
+  text-shadow:
+    0 0 14px rgba(57, 255, 20, 0.55),
+    0 0 28px rgba(57, 255, 20, 0.2);
+}
+
+.no-one-logo--hero .no-one-logo__glow {
+  opacity: 1;
+}
+
+.no-one-logo--animated {
+  transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+  .no-one-logo--hero {
+    gap: 0.7rem;
+  }
+
+  .no-one-logo--hero .no-one-logo__emblem {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .no-one-logo--hero .no-one-logo__wordmark {
+    font-size: 1.35rem;
+    letter-spacing: 0.1em;
+  }
+}
